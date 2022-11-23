@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+.navigation li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+  }
+
+.navigation li a {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    color: black;
+  }
+
+.navigation li a:hover {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 0;;
+    color: black;
+  }

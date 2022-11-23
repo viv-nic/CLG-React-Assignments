@@ -7,6 +7,7 @@ import Footer from './components/footer';
 import Fourohfour from './pages/fourohfour';
 import Projects from './pages/projects';
 
+
 function App() {
   return (
     <div className="App">
