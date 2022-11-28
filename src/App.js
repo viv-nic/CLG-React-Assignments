@@ -6,6 +6,7 @@ import About from './pages/about';
 import Footer from './components/footer';
 import Fourohfour from './pages/fourohfour';
 import Projects from './pages/projects';
+import EnquireForm from './components/enquireForm';
 
 
 function App() {
@@ -17,11 +18,14 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/about">
+          <Route path="/about">
             <About />
           </Route>
-          <Route exact path="/projects">
+          <Route path="/projects">
             <Projects />
+          </Route>
+          <Route path="/contact">
+            <EnquireForm />
           </Route>
           <Route path="*">
             <Fourohfour />
