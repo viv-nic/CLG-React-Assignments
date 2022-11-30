@@ -1,0 +1,32 @@
+{
+    "food": [
+      {
+        "title": "Singapore Chilli Crab",
+        "image": "https://www.recipetineats.com/wp-content/uploads/2021/07/Singapore-Chilli-Crab_4.jpg",
+        "description": "Deeply complex, mildly spicy, with a perfect balance of sweet and savoury, this stuff is the Mother Of All Flavour Bombs.",
+        "rating": "5",
+        "haveTried": true
+      },
+      {
+        "title": "Cprispy Baby Squid",
+        "image": "http://lh6.ggpht.com/Pn4V38Lo5i_PQx1WrQJpfZLSbDadZAVEZ1ISxHnV-JzGhnsX0W2oiFDaku60FUKsLAt8ziya6_E95nqOWgqRNbU=s800",
+        "description": "Soft juicy center, crispy outside, a crispy mouthful of ocean delight.",
+        "rating": "4.5",
+        "haveTried": true
+      },
+      {
+        "title": "Red Bean Soup with Mochi (Shiratama Dango)",
+        "image": "https://i.pinimg.com/736x/d9/c3/6b/d9c36beb9f21c80db4cbeacec36bc26b.jpg",
+        "description": "Red bean soup is a Japanese dessert with soft and chewy mochi served with cooked and sweetened red bean (azuki bean) soup",
+        "rating": "0",
+        "haveTried": false
+      },
+      {
+        "title": "Nasi lemak",
+        "image": "https://www.sbs.com.au/food/sites/sbs.com.au.food/files/styles/full/public/nasi-lemak-p119_0.jpg?itok=RQPpHrQJ&mtime=1662361761",
+        "description": "Malaysian coconut milk rice, served with sambal, fried crispy anchovies, toasted peanuts and cucumber.",
+        "rating": "4",
+        "haveTried": true
+      }
+    ]
+  }

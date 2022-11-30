@@ -99,7 +99,7 @@ function EnquireForm () {
 
             {!isSubmitted && !isValid && (
                 <FormMessaging
-                isError
+                isError={false}
                 content="Please fill in the form"/>
             )}
             
