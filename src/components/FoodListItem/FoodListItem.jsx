@@ -1,4 +1,4 @@
-function ListItem(props) {
+function FoodListItem(props) {
     return (
       <div>
         {!props.foodData.haveTried && <h1>MUST TRY</h1>}
@@ -13,4 +13,4 @@ function ListItem(props) {
     );
   }
   
-  export default ListItem;
+  export default FoodListItem;
