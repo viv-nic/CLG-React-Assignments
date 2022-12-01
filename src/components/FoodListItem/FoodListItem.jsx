@@ -1,6 +1,8 @@
+import styles from './FoodListItem.module.css';
+
 function FoodListItem(props) {
     return (
-      <div>
+      <div className={styles.container}>
         {!props.foodData.haveTried && <h1>MUST TRY</h1>}
         <img src={props.foodData.image} height={280} alt={props.foodData.title} />
         <h3>

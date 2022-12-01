@@ -1,6 +1,7 @@
 // import { style } from "@mui/system";
 import { useState } from "react";
 import FormMessaging from "./formMessaging";
+import styles from "./formMessaging.module.css";
 
 const options = [
     "Design & Branding",
@@ -32,22 +33,33 @@ function EnquireForm () {
     }
 
     return (
-        <div>
-            <h2>Let's keep in touch!</h2>
-            <label for="name">
-                 Name 
-                <input type="text" id="name" placeholder="Your Name.." onChange={(e) => setName(e.target.value)} />
-            </label>
-                    
-            <label for="email">
-                Email 
-                <input type="text" id="email" placeholder="Your Email.." onChange={(e) => setEmail(e.target.value)} />
-            </label>
-                    
-            <div>
-                <label for="services">
+        <div className={styles.enquiryForm}>
+            <h2 className={styles.formHeading}>Let's keep in touch!</h2>
+            <form>
+                <div className={styles.formRow}>
+                    <label className={styles.enquiryLabel}>
+                        Name 
+                        <input 
+                            type="text" 
+                            // className={styles.enquiryLabel} 
+                            placeholder="Your Name.." 
+                            onChange={(e) => setName(e.target.value)} />
+                    </label>
+                            
+                    <label for="email" className={styles.enquiryLabel}>
+                        Email 
+                        <input 
+                            type="text" 
+                            // className={styles.enquiryLabel}
+                            id="email" 
+                            placeholder="Your Email.." 
+                            onChange={(e) => setEmail(e.target.value)} />
+                    </label>
+                </div>       
+            
+                <label for="services" className={styles.enquiryLabel}>
                     What would you like to chat about?
-                </label><br></br>
+                </label>
                 <select id="services"
                     value={selectedService}
                     onChange={(e) => setSelectedService(e.target.value)}>
@@ -60,11 +72,12 @@ function EnquireForm () {
                             </option>
                         ))}
                 </select>
-            </div>
-            <div>
-                <label>
+            
+        
+                <label className={styles.enquiryLabel}>
                     Message
-                </label><br></br>
+                </label>
+
                 <textarea 
                     name="Message"
                     cols="40"
@@ -72,10 +85,9 @@ function EnquireForm () {
                     onChange={(e) => setMessage(e.target.value)}>
 
                 </textarea>
-            </div>
+            
 
-            <button 
-           
+            <button
             type="button"
             onClick={() => {
                 validateForm();
@@ -102,9 +114,9 @@ function EnquireForm () {
                 isError={false}
                 content="Please fill in the form"/>
             )}
-            
+        </form>  
         </div>
-    )
+    );
 
 }
 

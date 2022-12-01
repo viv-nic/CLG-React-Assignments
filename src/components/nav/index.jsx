@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "./navigation.css";
+import styles from "./navigation.module.css";
 
 function Nav() {
     return(
@@ -7,22 +7,22 @@ function Nav() {
             <nav className="navigation">
                 <ul>
                     <li>
-                        <NavLink to="/">
+                        <NavLink exact activeClassName={styles.active} to="/">
                             Home
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/about">
+                        <NavLink activeClassName={styles.active} to="/about">
                             About
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/projects">
+                        <NavLink activeClassName={styles.active} to="/projects">
                             Projects
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/contact">
+                        <NavLink activeClassName={styles.active} to="/contact">
                             Contact
                         </NavLink>
                     </li>

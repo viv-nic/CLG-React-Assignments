@@ -10,13 +10,16 @@
     display: flex;
     align-items: center;
     margin: 0px 10px;
+    font-size: 120%;
   }
   
-  .input {
-    padding: 5px;
-    background-color: #fafafa;
-    border: 1px solid black;
-  }
+  input[type="text"] {
+      /* padding: 12px 20px; */
+      margin: 8px 1px;
+      width: 70%;
+      background-color: #fafafa;
+      border: 1px solid black;
+    }
   
   .addTodoButton {
     background-color: black;

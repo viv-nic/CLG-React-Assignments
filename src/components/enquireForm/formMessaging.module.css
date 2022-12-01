@@ -1,34 +1,101 @@
+.formHeading {
+    text-align: center;
+    margin: 10px;
+    padding-bottom: 1%;
+    font-size: calc(15px + 2vmin);
+  }
+
+.enquiryForm {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    width: 100%;
+    padding: 2%;
+  }
+
+.formRow {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+.enquiryLabel {
+    display: block;
+    width: 100%;
+  }
+
+input[type="text"],
+input[type="email"] {
+    padding: 12px 20px;
+    margin: 8px 1px;
+    width: 90%;
+    background-color: #fafafa;
+    border: 1px solid black;
+  }
+
+select {
+  padding: 12px 20px;
+  margin: 8px 2px;
+  background-color: #fafafa;
+  border: 1px solid black;
+  width: 99%;
+  }
+
+textarea {
+  padding: 12px 20px;
+  margin: 8px 1px;   
+  background-color: #fafafa;
+  border: 1px solid black;
+  width: 90%;
+  }
+
+input:hover,
+textarea:hover,
+select:hover {
+  border: 1px solid black;
+  }
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  border: 1px solid black;
+  outline: none;
+  border-radius: 0;
+  } 
+
+button {
+  background-color: black;
+  color: white;
+  border-color: black;
+  outline: none;
+  width: 20%;
+  margin-left: 40%;
+  padding: 5px 10px;
+  cursor: pointer;
+  }
+  
+button:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+  width: 20%;
+  padding: 5px 10px;
+  outline: none;
+  }
+
 .success {
     color: green;
     margin: "8px 4px";
+    padding-top: 1%;
+    text-align: center;
     }
 
 .error {
     color: red;
     margin: "8px 4px";
+    padding-top: 1%;
+    text-align: center;
     }
 
-input[type=text], select {
-    width:28%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    }
-
-button[type=button] {
-    width:30%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    }
-
-button[type=button]:hover {
-    background-color: #45a049;
-    }

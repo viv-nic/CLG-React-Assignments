@@ -1,22 +1,22 @@
 @import-normalize;
 
 :root {
-  ---main-color: #2b3574;
-  ---main-bg-color: white;
-  ---main-font-family:"pdu-regular", arial;
-  ---main-font-weight: normal;
-  ---main-font-size: 0.75rem;
-  ---main-border-color: #2b3574;
-  ---main-font-color: #2b3574;
-  ---main-secondary-color: #f6eae9;
-  ---invalid-color: #b40e0e;
-  ---background-color: white;
+  --main-color: #2b3574;
+  --main-bg-color: white;
+  --main-font-family:"pdu-regular", arial;
+  --main-font-weight: normal;
+  --main-font-size: 0.75rem;
+  --main-border-color: #2b3574;
+  --main-font-color: #2b3574;
+  --main-secondary-color: #f6eae9;
+  --invalid-color: #b40e0e;
+  --background-color: white;
 }
 
 body {
   margin: 0;
-  font-family: var(---main-font-family);
-  background-color: var(---background-color);
+  font-family: var(--main-font-family);
+  background-color: var(--background-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
