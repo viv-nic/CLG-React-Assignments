@@ -1,12 +1,13 @@
-const Contact = () => {
-    return (
-        <div>
-            <h1>
-                Let's keep in touch!
-            </h1>
-           
-        </div>
-    )
-}
+import React from "react";
+import FormMessaging from "../components/enquireForm/formMessaging";
 
-export default Contact;
+const EnquiryForm = () => {
+    return (
+        <section>
+            <h1>Let's keep in touch!</h1>
+            <FormMessaging />
+        </section>
+    );
+};
+
+export default EnquiryForm;

@@ -1,13 +1,21 @@
+import styles from "./checkBox.module.css";
+
 const Checkbox = ({ label, value, checked, onChange }) => {
     return (
-      <label>
+      <label className={styles.checkboxLabel}>
         <input
           type="checkbox"
           checked={checked}
           value={value}
           onChange={onChange}
         />
-        {label}
+        {checked ? (
+          <p className={styles.checkboxLabelText}>
+            <strike>{label}</strike>
+          </p>
+        ) : (
+          <p className={styles.checkboxLabelText}>{label}</p>
+        )}
       </label>
     );
   };

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import Checkbox from "./checkbox";
+import Checkbox from "../checkbox";
+import styles from "./todoList.module.css";
 
 const Todo = () => {
     //set initial state
@@ -33,7 +34,7 @@ const Todo = () => {
         // sieving through the todos and returning the ones that are completed
         let mapped = todos.map((task) => {
         return task.id === Number(id)
-        ? { ...task, isCompleted: true }
+        ? { ...task, isCompleted: !task.isCompleted }
         : { ...task };
         });
         //setting our new todo list with updated variables
@@ -47,13 +48,13 @@ const Todo = () => {
     // };
 
     return (
-        <div className="App">
-        <h1>ToDo list</h1>
-        <form  onSubmit={addTodos}>
         <div>
-
-            <label>
+        
+        <form  onSubmit={addTodos} className={styles.todoForm}>
+        
+            <label className={styles.label}>
             Task
+            </label>
             <input
                 type="text"
                 value={task.taskDescription}
@@ -65,49 +66,30 @@ const Todo = () => {
                 })
                 }
             />
-            </label>
+           
 
-            <button>Add Todo</button>
-        </div>
+            <button className={styles.addTodoButton}>
+                <h1>+</h1>
+            </button>
+        
         </form>
     <>
     {todos.length > 0 ? ( 
         <>
         {todos.map((t, index) => {
         return (
-            <div id={t.id} key={index + t.id} value={t.id}>
-            {t.isCompleted ? (
-                <strike>
-                <p>{t.taskDescription}</p>
-                </strike>
-            ) : (
-                <>
+            <div id={t.id} key={index + t.id}>
                 <Checkbox 
                     label={t.taskDescription}
                     value={t.id}
                     checked={t.isCompleted}
                     onChange={(e) => handleToggle(t.id)}
                 />
-                
-                
-                {/* <p>{t.taskDescription}</p>
-                <button
-                    id={t.id}
-                    key={index + t.id}
-                    value={t.id}
-                    onClick={handleClick}
-                >
-                    complete
-                </button> */}
-                
-                </>
-                
-            )}
             </div>
         );
-        }
-        )}
-        </>  
+        })}
+    </>
+   
     ) : (
     <p>No Tasks for today</p>
     )}

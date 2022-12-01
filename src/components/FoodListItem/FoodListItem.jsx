@@ -11,6 +11,6 @@ function FoodListItem(props) {
         
       </div>
     );
-  }
+  };
   
   export default FoodListItem;
