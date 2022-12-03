@@ -46,21 +46,20 @@ function EnquireForm () {
                             onChange={(e) => setName(e.target.value)} />
                     </label>
                             
-                    <label for="email" className={styles.enquiryLabel}>
+                    <label className={styles.enquiryLabel}>
                         Email 
                         <input 
                             type="text" 
                             // className={styles.enquiryLabel}
-                            id="email" 
                             placeholder="Your Email.." 
                             onChange={(e) => setEmail(e.target.value)} />
                     </label>
                 </div>       
             
-                <label for="services" className={styles.enquiryLabel}>
+                <label className={styles.enquiryLabel}>
                     What would you like to chat about?
                 </label>
-                <select id="services"
+                <select 
                     value={selectedService}
                     onChange={(e) => setSelectedService(e.target.value)}>
                         <option disabled={true} value="">

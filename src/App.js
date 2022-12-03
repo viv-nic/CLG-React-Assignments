@@ -9,6 +9,7 @@ import Projects from './pages/projects';
 import EnquireForm from './components/enquireForm';
 import TodoList from './pages/todoList';
 import FoodGallery from './pages/foodGallery';
+import Book from './pages/book';
 
 
 function App() {
@@ -22,20 +23,23 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/about">
+          <Route exact path="/about">
             <About />
           </Route>
           <Route exact path="/projects">
             <Projects />
           </Route>
           {/* you can add exact or not for extension path, but the main has to have exact in it */}
-          <Route path={`/projects/todo-app`}>
+          <Route exact path={`/projects/todo-app`}>
             <TodoList />
           </Route>
           <Route exact path={`/projects/food-gallery`}>
             <FoodGallery />
           </Route>
-          <Route path="/contact">
+          <Route exact path={`/projects/books`}>
+            <Book />
+          </Route>
+          <Route exact path="/contact">
             <EnquireForm />
           </Route>
           <Route path="*">
