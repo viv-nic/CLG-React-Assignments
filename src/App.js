@@ -16,8 +16,7 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      {/* <TodoList />
-      <FoodGallery /> */}
+      
       <main>
         <Switch>
           <Route exact path="/">
