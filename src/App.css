@@ -4,6 +4,7 @@
 
 h1 {
   text-align: center;
+  padding-left: 2rem;
 }
 
 ul {
@@ -36,7 +37,8 @@ li a:hover {
   width: 100%;
   position: fixed;
   background: #333;
-  padding: 10px 0;
+  margin-top: 20px;
+  padding: 20px 0;
   color: #fff;
   bottom: 0;
 

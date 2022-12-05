@@ -19,6 +19,10 @@ const Projects = () => {
                 <li>
                     <NavLink to={`${url}/food-gallery`}>Food Gallery</NavLink>
                 </li>
+                <li>
+                    <NavLink to={`${url}/books`}>Books</NavLink>
+                </li>
+                
             </ul>
 
             {/* <ol>
