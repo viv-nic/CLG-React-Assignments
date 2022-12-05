@@ -1,38 +1,10 @@
-import React, { useCallback, useState} from "react";
+import React, { useCallback, useState, useEffect} from "react";
 import Button from "../components/Button";
 import BookList from "../components/BookList";
 import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
 
 
-// function Book() {
-//     const [books, setBooks] = useState([]);
 
-//     function fetchBooksHandler() {
-//         fetch("https://openlibrary.org/authors/OL34184A/works.json?limit=10").then((response) => {
-//             return response.json();
-//         }).then((data) => {
-//             const transformedBooks = data.entries.map((bookData, index) => {
-//                 return {
-//                     key: bookData.key,
-//                     name: bookData.title
-//                 }
-//             })
-//             setBooks(transformedBooks)
-//         })
-//     }
-//     return(
-//         <div>
-//             <section>
-//                 <Button onClick={fetchBooksHandler}>
-//                     Search for Roald Dahl's work
-//                 </Button>
-//             </section>
-//             <section>
-//                 <BookList books={books}/>
-//             </section>
-//         </div>
-//     )
-// }
 const Book = () => {
     const [books, setBooks] = useState([]);
     const [error, setError] = useState(null);
@@ -65,6 +37,10 @@ const Book = () => {
         setIsLoading(false);
     }, []);
 
+    useEffect(() => {
+      fetchBooksHandler()
+     }, [fetchBooksHandler])
+
     let content = <p>No books found</p>;
 
     if (error) {
@@ -83,7 +59,8 @@ const Book = () => {
     return(
         <section>
             <h1>Books</h1>
-            <Button onClick={fetchBooksHandler}>Search for Roald Dahl books</Button>
+            {/* <Button onClick={fetchBooksHandler}>Search for Roald Dahl books</Button> */}
+            <Button name="Search for Roald Dahl books" onClick={fetchBooksHandler} />
             {content}
         </section>
     );

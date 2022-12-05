@@ -14,5 +14,5 @@
     border-top: 10px solid var(--main-border-color);
     border-radius: 50%;
     animation: spinner 1.5s linear infinite;
-    margin-left: 46%;
+    margin-left: 48%;
 }

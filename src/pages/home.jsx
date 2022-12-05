@@ -1,4 +1,7 @@
+
+
 const Home = () => {
+  
     return (
         <h1>
             Welcome Home
@@ -6,4 +9,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Home;
