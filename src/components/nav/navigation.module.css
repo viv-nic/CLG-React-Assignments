@@ -2,7 +2,8 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: white;
+    background-color: var(--background-color);
+    /* padding: 1% 0%; */
 }
 
 header ul {
@@ -21,7 +22,7 @@ header li a {
     display: block;
     padding: 16px;
     text-decoration: none;
-    color: var(--main-font-color);
+    color: var(--link-color);
   }
 
 header li a:hover,
@@ -31,6 +32,6 @@ header .active {
     border-top: 3px dotted var(--main-font-color);
     padding-top: 1.5%;
     padding-bottom: 1.5%;
-    color: var(--main-font-color);
+    color: var(--link-hover-color);
     text-decoration: none;
   }

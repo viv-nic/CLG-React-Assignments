@@ -1,21 +1,102 @@
-.App {
+@import-normalize;
+
+.app {
   text-align: center;
 }
 
+.light-theme {
+  --main-color:#4e4e4e;
+  --main-bg-color: #ffffff;
+  --main-border-color: #5f636e;
+  --main-font-color: #4e4e4e;
+  /* --main-secondary-color: #222222;  */
+  --invalid-color: #b40e0e;
+  --background-color: #ffffff;
+  --heading-color: #d23669;
+
+  --link-color: #d23669;
+  --link-visited-color: #fc85ae;
+  --link-hover-color: #f3558e;
+  --link-active-color: #fc5c9c;
+
+  --main-font-family: "ubuntu", arial;
+  --main-font-weight: normal;
+  --main-font-size: 0.75rem;
+
+  font-family: var(--main-font-family);
+  background-color: var(--background-color);
+
+  height: 100%;
+}
+
+
+.dark-theme {
+  --main-color: #f0f0f0;
+  --main-bg-color: #373c49;
+  --main-border-color: #5f636e;
+  --main-font-color: #fafafa;
+  /* --main-secondary-color: #ffffff; */
+  --invalid-color: #ff304f;
+  --background-color: #282c35;
+  --heading-color: #ffa7c4;
+
+  --link-color: #ffa7c4;
+  --link-visited-color: #f3558e;
+  --link-hover-color: #f469a9;
+  --link-active-color: #fc5c9c;
+
+  --main-font-family: "ubuntu", arial;
+  --main-font-weight: normal;
+  --main-font-size: 0.75rem;
+
+  font-family: var(--main-font-family);
+  background-color: var(--background-color);
+  background-color: #282c35;
+  color: #f0f0f0;
+
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+
+}
+
+section {
+  margin: 2% 5%;
+}
+
 h1 {
+  color: var(--heading-color);
   text-align: center;
   padding-left: .5rem;
   padding-right: .5rem;
 }
 
-.heading-books {
-  padding-left: 3rem;
+p {
+  color: var(--main-font-color);
+  font-weight: normal;
+  font-size: 0.9rem;
+  text-align: center;
 }
+
+.heading-books {
+  padding-left: 2.5rem;
+}
+
+a {
+  color: var(--link-color);
+} 
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  text-align: center;
+  
 }
 
 li {
@@ -28,7 +109,7 @@ li a {
   display: block;
   padding: 8px;
   text-decoration: none;
-  color: black;
+  color: var(--main-font-color)
 }
 
 li a:hover {
@@ -38,13 +119,13 @@ li a:hover {
 
 
 .footer {
-  
+  text-align: center;
   width: 100%;
   position: fixed;
-  background: #333;
+  background: var(--main-bg-color);
   margin-top: 20px;
   padding: 20px 0;
-  color: #fff;
+  color: var(--main-color);
   bottom: 0;
 
 }

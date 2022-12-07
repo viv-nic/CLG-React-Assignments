@@ -1,29 +1,10 @@
 @import-normalize;
 
-:root {
-  --main-color: #black;
-  --main-bg-color: white;
-  --main-font-family:"pdu-regular", arial;
-  --main-font-weight: normal;
-  --main-font-size: 0.75rem;
-  --main-border-color: #2b3574;
-  --main-font-color: black;
-  --main-secondary-color: #f6eae9;
-  --invalid-color: #b40e0e;
-  --background-color: white;
+* {
+  box-sizing: border-box;
+ 
 }
 
-body {
-  margin: 0;
-  font-family: var(--main-font-family);
-  background-color: var(--background-color);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
-}
-
-section {
-  margin: 2% 5%;
-}
 
 

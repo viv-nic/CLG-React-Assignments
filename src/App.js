@@ -18,9 +18,9 @@ function App() {
   const theme = useContext(ThemeContext);
   const darkMode = theme.darkMode;
   console.log(darkMode);
-  
+
   return (
-    <div className="App">
+    <div className={darkMode ? "dark-theme" : "light-theme"}>
       <Nav />
       
       <main>

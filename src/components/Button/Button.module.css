@@ -1,14 +1,14 @@
 .button {
     position:relative;
-    right: 18%;
+    left: 1%;
     font: inherit;
     cursor: pointer;
-    background: var(--main-color);
-    border: 1px solid var(--main-color);
-    color: white;
+    background: var(--link-visited-color);
+    border: 1px solid var(--main-border-color);
+    color: var(--main-font-color);
     padding: 0.75rem 2rem;
     border-radius: 20px;
-    border: 1px solid var(--main-color);
+   
 
   }
   

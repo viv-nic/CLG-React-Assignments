@@ -34,7 +34,7 @@ function EnquireForm () {
 
     return (
         <div className={styles.enquiryForm}>
-            <h2 className={styles.formHeading}>Let's keep in touch!</h2>
+            <h1 className={styles.formHeading}>Let's keep in touch!</h1>
             <form>
                 <div className={styles.formRow}>
                     <label className={styles.enquiryLabel}>
