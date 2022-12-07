@@ -4,7 +4,12 @@
 
 h1 {
   text-align: center;
-  padding-left: 2rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.heading-books {
+  padding-left: 3rem;
 }
 
 ul {

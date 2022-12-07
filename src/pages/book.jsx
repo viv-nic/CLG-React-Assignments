@@ -58,7 +58,7 @@ const Book = () => {
     
     return(
         <section>
-            <h1>Books</h1>
+            <h1 className="heading-books">Books</h1>
             {/* <Button onClick={fetchBooksHandler}>Search for Roald Dahl books</Button> */}
             <Button name="Search for Roald Dahl books" onClick={fetchBooksHandler} />
             {content}
