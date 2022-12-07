@@ -1,7 +1,14 @@
 import { NavLink } from "react-router-dom";
 import styles from "./navigation.module.css";
+import ToggleSwitch from "../toggleSwitch";
+import { useContext } from "react";
+import { ThemeContext } from "../../theme/ThemeProvider";
 
 function Nav() {
+    const theme = useContext(ThemeContext);
+     const darkMode = theme.darkMode;
+     console.log(darkMode);
+
     return(
         <header>
             <nav className="navigation">
@@ -28,8 +35,12 @@ function Nav() {
                     </li>
                 </ul>
             </nav>
+            <ToggleSwitch 
+                isOn={darkMode}
+                handleToggle={() => theme.setDarkMode(!darkMode)}
+            />
         </header>
-    )
-}
+    );
+};
 
 export default Nav
