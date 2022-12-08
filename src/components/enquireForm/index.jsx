@@ -41,7 +41,7 @@ function EnquireForm () {
                         Name 
                         <input 
                             type="text" 
-                            // className={styles.enquiryLabel} 
+                            className={styles.enquiryLabel} 
                             placeholder="Your Name.." 
                             onChange={(e) => setName(e.target.value)} />
                     </label>
@@ -50,7 +50,7 @@ function EnquireForm () {
                         Email 
                         <input 
                             type="text" 
-                            // className={styles.enquiryLabel}
+                            className={styles.enquiryLabel}
                             placeholder="Your Email.." 
                             onChange={(e) => setEmail(e.target.value)} />
                     </label>
