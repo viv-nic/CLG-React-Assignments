@@ -4,8 +4,8 @@ import FoodListItem from "../FoodListItem/FoodListItem";
 
 
 function FoodList() {
-    return data.food.map((food) => {
-        return <FoodListItem foodData={food} />;
+    return data.food.map((food, index) => {
+        return <FoodListItem key={index} foodData={food} />;
     });
 };
 
