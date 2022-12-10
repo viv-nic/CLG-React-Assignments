@@ -10,11 +10,17 @@ import EnquireForm from './components/enquireForm';
 import TodoList from './pages/todoList';
 import FoodGallery from './pages/foodGallery';
 import Book from './pages/book';
+import React, { useContext } from 'react';
+import { ThemeContext } from "./theme/ThemeProvider";
 
 
 function App() {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.darkMode;
+  console.log(darkMode);
+
   return (
-    <div className="App">
+    <div className={darkMode ? "dark-theme" : "light-theme"}>
       <Nav />
       
       <main>
