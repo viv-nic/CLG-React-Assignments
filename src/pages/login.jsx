@@ -27,7 +27,7 @@ const emailReducer = (state, action) => {
             isValid: action.val.includes("@")
         };
     }
-    if (action.type === "USER_BLUR") {
+    if (action.type === "INPUT_BLUR") {
         return {
             value: state.value,
             isValid: state.value.includes("@")
@@ -43,7 +43,7 @@ const passwordReducer = (state, action) => {
             isValid: action.val.trim().length > 6
         };
     }
-    if (action.type === "USER_BLUR") {
+    if (action.type === "INPUT_BLUR") {
         return {
             value: state.value,
             isValid: state.value.trim().length > 6
@@ -180,9 +180,16 @@ const Login = () => {
                     </span>
                 )}
                 <div>
+                    {/* <Button
+                        type="submit"
+                        disabled={!formIsValid | (formIsValid === false)}
+                    >
+                        Sign In
+                    </Button> */}
                     <Button 
                     // className={classes.button} 
                     name="Sign In" 
+                    disabled={!formIsValid | (formIsValid === false)}
                     />
                 </div>
                 {error && (

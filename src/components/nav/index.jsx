@@ -50,6 +50,9 @@ function Nav() {
             {!isLoggedIn && (
                 <Button name="Sign In" onClick={() => history.push("/login")} />
             )}
+            {isLoggedIn && (
+                <Button name="Settings" onClick={() => history.push("/profile")} />
+            )}
             
         </header>
     );

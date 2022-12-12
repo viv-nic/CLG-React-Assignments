@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useHistory } from 'react-router-dom';
 import Nav from './components/nav';
 import Home from './pages/home';
 import About from './pages/about';
@@ -14,12 +14,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ThemeContext } from "./theme/ThemeProvider";
 import AuthContext from './auth/auth-context';
 import Login from './pages/login';
+import Profile from './pages/profile';
 
 
 function App() {
   const theme = useContext(ThemeContext);
   const darkMode = theme.darkMode;
-  console.log(darkMode);
+  let history = useHistory();
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [name, setName] = useState("");
@@ -37,11 +38,13 @@ function App() {
     setIsLoggedIn(true);
     setName(name);
     setEmail(email);
+    history.push("/");
   };
 
   const logoutHandler = () => {
     localStorage.removeItem("isLoggedIn");
     setIsLoggedIn(false);
+    history.push("/");
   };
 
   return (
@@ -85,6 +88,11 @@ function App() {
             {!isLoggedIn && (
               <Route exact path={`/login`}>
               <Login />
+            </Route>
+            )}
+            {isLoggedIn && (
+              <Route exact path={`/profile`}>
+              <Profile />
             </Route>
             )}
             <Route path="*">
