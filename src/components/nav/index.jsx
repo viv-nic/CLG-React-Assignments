@@ -1,12 +1,16 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import styles from "./navigation.module.css";
 import ToggleSwitch from "../toggleSwitch";
 import { useContext } from "react";
 import { ThemeContext } from "../../theme/ThemeProvider";
+import AuthContext from "../../auth/auth-context";
+import Button from "../Button";
 
 function Nav() {
     const theme = useContext(ThemeContext);
      const darkMode = theme.darkMode;
+     const { isLoggedIn } = useContext(AuthContext);
+     let history = useHistory();
      console.log(darkMode);
 
     return(
@@ -43,6 +47,10 @@ function Nav() {
                 rightAriaLabel="toggle light mode"
                 rightEmoji={<>☀️</>}
             />
+            {!isLoggedIn && (
+                <Button name="Sign In" onClick={() => history.push("/login")} />
+            )}
+            
         </header>
     );
 };

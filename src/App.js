@@ -13,6 +13,7 @@ import Book from './pages/book';
 import React, { useContext, useEffect, useState } from 'react';
 import { ThemeContext } from "./theme/ThemeProvider";
 import AuthContext from './auth/auth-context';
+import Login from './pages/login';
 
 
 function App() {
@@ -81,6 +82,11 @@ function App() {
             <Route exact path="/contact">
               <EnquireForm />
             </Route>
+            {!isLoggedIn && (
+              <Route exact path={`/login`}>
+              <Login />
+            </Route>
+            )}
             <Route path="*">
               <Fourohfour />
             </Route>

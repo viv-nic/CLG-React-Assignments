@@ -1,11 +1,18 @@
-
+import { useContext } from "react";
+import AuthContext from "../auth/auth-context";
 
 const Home = () => {
+    const { name, isLoggedIn } = useContext(AuthContext);
   
     return (
-        <h1>
-            Welcome Home
-        </h1>
+        <section>
+            {isLoggedIn ? (
+                <h1>Welcome back, {name}</h1>
+            ) : (
+                <h1>Welcome to Vivian's blog</h1>
+            )}
+          </section>
+      
     )
 }
 
