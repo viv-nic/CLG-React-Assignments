@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../../theme/ThemeProvider";
 import AuthContext from "../../auth/auth-context";
 import Button from "../Button";
+import AvatarButton from "../avatarButton";
 
 function Nav() {
     const theme = useContext(ThemeContext);
@@ -39,20 +40,27 @@ function Nav() {
                     </li>
                 </ul>
             </nav>
-            <ToggleSwitch 
-                isOn={darkMode}
-                handleToggle={() => theme.setDarkMode(!darkMode)}
-                leftAriaLabel="toggle dark mode"
-                leftEmoji={<>🌙</>}
-                rightAriaLabel="toggle light mode"
-                rightEmoji={<>☀️</>}
-            />
-            {!isLoggedIn && (
-                <Button name="Sign In" onClick={() => history.push("/login")} />
-            )}
-            {isLoggedIn && (
-                <Button name="Settings" onClick={() => history.push("/profile")} />
-            )}
+            <div 
+            // className={styles["nav-controls"]}
+            >
+                <ToggleSwitch 
+                    isOn={darkMode}
+                    handleToggle={() => theme.setDarkMode(!darkMode)}
+                    leftAriaLabel="toggle dark mode"
+                    leftEmoji={<>🌙</>}
+                    rightAriaLabel="toggle light mode"
+                    rightEmoji={<>☀️</>}
+                />
+                {isLoggedIn && (
+                    <AvatarButton onClick={() => history.push("/profile")} />
+                )}
+                {!isLoggedIn && (
+                    <Button name="Sign In" onClick={() => history.push("/login")} />
+                )}
+                {/* {isLoggedIn && (
+                    <Button name="Settings" onClick={() => history.push("/profile")} />
+                )} */}
+            </div>
             
         </header>
     );

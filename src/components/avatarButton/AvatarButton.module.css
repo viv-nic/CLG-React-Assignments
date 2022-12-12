@@ -1,0 +1,12 @@
+.avatar-button {
+    position: fixed;
+    top: 1%;
+    right: 2%;
+    height: 68px;
+    width: 68px;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--main-border-color);
+    border-radius: 50%;
+    text-align: "center";
+    background-size: cover;
+  }
