@@ -67,7 +67,8 @@ const Book = () => {
             <h1 className="heading-books">Books</h1>
             {/* <Button onClick={fetchBooksHandler}>Search for Roald Dahl books</Button> */}
             <input type="text" value={searchText} onChange={searchTextHandler} />
-            <Button name="Search for books" onClick={fetchBooksHandler} />
+            <Button 
+            name="Search for books" onClick={fetchBooksHandler} />
             {content}
         </section>
     );

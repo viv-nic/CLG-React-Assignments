@@ -4,7 +4,7 @@ import ToggleSwitch from "../toggleSwitch";
 import { useContext } from "react";
 import { ThemeContext } from "../../theme/ThemeProvider";
 import AuthContext from "../../auth/auth-context";
-import Button from "../Button";
+// import Button from "../Button";
 import AvatarButton from "../avatarButton";
 
 function Nav() {
@@ -54,12 +54,17 @@ function Nav() {
                 {isLoggedIn && (
                     <AvatarButton onClick={() => history.push("/profile")} />
                 )}
-                {!isLoggedIn && (
-                    <Button name="Sign In" onClick={() => history.push("/login")} />
-                )}
-                {/* {isLoggedIn && (
-                    <Button name="Settings" onClick={() => history.push("/profile")} />
+                {/* {!isLoggedIn && (
+                    <Button 
+                    // className={styles.signinButton} 
+                    name="Sign In" onClick={() => history.push("/login")} />
                 )} */}
+                {!isLoggedIn && (
+                    <button 
+                    className={styles.signinButton} 
+                    onClick={() => history.push("/login")}>Sign In</button>
+                )}
+               
             </div>
             
         </header>

@@ -187,13 +187,13 @@ const Login = () => {
                         Sign In
                     </Button> */}
                     <Button 
-                    // className={classes.button} 
+                    // className={classes["signin-button"]}
                     name="Sign In" 
                     disabled={!formIsValid | (formIsValid === false)}
                     />
                 </div>
                 {error && (
-                    <span>
+                    <span className={classes.actions}>
                         Sorry, please fill in the form to continue
                     </span>
                 )}

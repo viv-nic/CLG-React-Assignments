@@ -10,3 +10,14 @@
     text-align: "center";
     background-size: cover;
   }
+
+   
+  .avatar-button:hover,
+  .avatar-button:active {
+    background-color: var(--link-visited-color);
+    border-color: var(--main-border-color);
+    color: var(--main-color);
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+  }
