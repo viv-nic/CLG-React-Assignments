@@ -43,9 +43,9 @@ const Book = () => {
         setIsLoading(false);
     }, [searchText]);
 
-    useEffect(() => {
-      fetchBooksHandler()
-     }, [fetchBooksHandler])
+    // useEffect(() => {
+    //   fetchBooksHandler()
+    //  }, [fetchBooksHandler])
 
     let content = <p>No books found</p>;
 
