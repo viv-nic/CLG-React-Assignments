@@ -43,9 +43,9 @@ const Book = () => {
         setIsLoading(false);
     }, [searchText]);
 
-    useEffect(() => {
-      fetchBooksHandler()
-     }, [fetchBooksHandler])
+    // useEffect(() => {
+    //   fetchBooksHandler()
+    //  }, [fetchBooksHandler])
 
     let content = <p>No books found</p>;
 
@@ -66,9 +66,15 @@ const Book = () => {
         <section>
             <h1 className="heading-books">Books</h1>
             {/* <Button onClick={fetchBooksHandler}>Search for Roald Dahl books</Button> */}
-            <input type="text" value={searchText} onChange={searchTextHandler} />
+            <input 
+            type="text" 
+            value={searchText}
+            onChange={searchTextHandler} 
+            />
             <Button 
-            name="Search for books" onClick={fetchBooksHandler} />
+            name="Search for books" 
+            onClick={fetchBooksHandler} 
+            />
             {content}
         </section>
     );
