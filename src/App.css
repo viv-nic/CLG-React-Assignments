@@ -74,6 +74,8 @@ body {
 /* if i take this out if would sovled the food page problem but my other sections on other page would be affected */
 section {
   padding-bottom: 2%;
+  background-color: var(--background-color);
+  color: var(--main-color);
 }
 
 
@@ -101,7 +103,7 @@ p {
 }
 
 .bookpage-layout, .todolist-layout {
-  margin: 2% 5%;
+  padding: 2% 5%;
 }
 
 a {
