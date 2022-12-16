@@ -103,7 +103,7 @@ p {
 }
 
 .bookpage-layout, .todolist-layout {
-  margin: 2% 5%;
+  padding: 2% 5%;
 }
 
 a {
