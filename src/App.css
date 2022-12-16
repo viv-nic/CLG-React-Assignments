@@ -10,7 +10,7 @@
   --main-bg-color: #ffffff;
   --main-border-color: #5f636e;
   --main-font-color: #4e4e4e;
-  /* --main-secondary-color: #222222;  */
+  --main-secondary-color: #222222; 
   --invalid-color: #b40e0e;
   --background-color: #ffffff;
   --heading-color: #d23669;
@@ -58,17 +58,24 @@
   height: 100%;
 }
 
+/* html, body, #root {
+  height: 100%;
+  width: 100%;
+} */
+
+
 body {
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
- 
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+  height: 100%;
+ }
 
-}
-
+/* if i take this out if would sovled the food page problem but my other sections on other page would be affected */
 section {
-  margin: 2% 5%;
+  padding-bottom: 2%;
 }
+
 
 h1 {
   color: var(--heading-color);
@@ -91,6 +98,10 @@ p {
 
 .heading-books {
   padding-left: 2.5rem;
+}
+
+.bookpage-layout, .todolist-layout {
+  margin: 2% 5%;
 }
 
 a {

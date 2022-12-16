@@ -63,7 +63,7 @@ const Book = () => {
 
     
     return(
-        <section>
+        <section className="bookpage-layout">
             <h1 className="heading-books">Books</h1>
             <input type="text" value={searchText} onChange={searchTextHandler} />
             <Button 
