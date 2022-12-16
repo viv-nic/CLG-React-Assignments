@@ -40,9 +40,7 @@ function Nav() {
                     </li>
                 </ul>
             </nav>
-            <div 
-            // className={styles["nav-controls"]}
-            >
+            <div>
                 <ToggleSwitch 
                     isOn={darkMode}
                     handleToggle={() => theme.setDarkMode(!darkMode)}
@@ -56,15 +54,11 @@ function Nav() {
                 )}
                 {!isLoggedIn && (
                     <Button 
-                    className={styles.signinButton} 
+                    type="login"
                     name="Sign In" 
                     onClick={() => history.push("/login")}></Button>
                 )}
-                {/* {!isLoggedIn && (
-                    <button 
-                    className={styles.signinButton} 
-                    onClick={() => history.push("/login")}>Sign In</button>
-                )} */}
+               
                
             </div>
             

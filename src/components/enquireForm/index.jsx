@@ -3,6 +3,7 @@ import { useState } from "react";
 import FormMessaging from "./formMessaging";
 import styles from "./formMessaging.module.css";
 
+
 const options = [
     "Design & Branding",
     "Web and App Development",
@@ -95,6 +96,16 @@ function EnquireForm () {
             }} >
                 Submit
             </button>
+            {/* <Button
+            type="submit"
+            name="Submit"
+            onClick={() => {
+                validateForm();
+                setIsSubmitted(true);
+                console.log({name, email, selectedService, message});
+            }} >
+                Submit
+            </Button> */}
               
             {isSubmitted && isSuccess && isValid && (
                 <FormMessaging

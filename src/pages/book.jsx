@@ -67,6 +67,7 @@ const Book = () => {
             <h1 className="heading-books">Books</h1>
             <input type="text" value={searchText} onChange={searchTextHandler} />
             <Button 
+            type="book-search"
             name="Search for books" onClick={fetchBooksHandler}></Button>
             
             {/* <Button 
