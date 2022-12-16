@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect} from "react";
+import React, { useCallback, useState } from "react";
 import Button from "../components/Button";
 import BookList from "../components/BookList";
 import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
@@ -65,10 +65,12 @@ const Book = () => {
     return(
         <section>
             <h1 className="heading-books">Books</h1>
-            {/* <Button onClick={fetchBooksHandler}>Search for Roald Dahl books</Button> */}
             <input type="text" value={searchText} onChange={searchTextHandler} />
             <Button 
-            name="Search for books" onClick={fetchBooksHandler} />
+            name="Search for books" onClick={fetchBooksHandler}></Button>
+            
+            {/* <Button 
+            name="Search for books" onClick={fetchBooksHandler} /> */}
             {content}
         </section>
     );
