@@ -18,3 +18,66 @@
     border-color: var(--main-border-color);
     color: var(--main-color);
   }
+
+  .login-button {
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    height: 48px;
+    width: 68px;
+    background-color: var(--link-visited-color);
+    border: 1px solid var(--main-border-color);
+    border-radius: 10%;
+    text-align: "center";
+  
+  }
+
+   
+  .login-button:hover,
+  .login-button:active {
+    background-color: var(--main-border-color);
+    border-color: var(--link-visited-color);
+    color: var(--main-bg-color);
+    border-radius: 10%;
+    height: 50px;
+    width: 70px;
+  }
+
+  .book-search {
+    height: 40px;
+    width: 300px;
+    font-size: 120%;
+    border: 1px solid var(--main-border-color);
+  }
+
+  .book-search:hover,
+  .book-search:active {
+    background-color: var(--main-border-color);
+    border-color: var(--main-border---);
+    color: var(--main-bg-color);
+    height: 45px;
+    width: 305px;
+  }
+
+  .submit-button {
+    position: relative;
+    right: 1%;
+    height: 50px;
+    width: 200px;
+    background-color: var(--link-visited-color);
+    border: 1px solid var(--main-border-color);
+    border-radius: 30px;
+    text-align: "center";
+    font-size: 110%;
+  }
+
+  .submit-button:hover,
+  .submit-button:active {
+    background-color: var(--main-border-color);
+    border-color: var(--link-visited-color);
+    color: var(--main-bg-color);
+    border-radius: 30px;
+    height: 55px;
+    width: 205px;
+  }
+
