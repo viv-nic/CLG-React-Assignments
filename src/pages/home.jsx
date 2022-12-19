@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import AuthContext from "../auth/auth-context";
+import React from "react";
 
 const Home = () => {
     const { name, isLoggedIn } = useContext(AuthContext);

@@ -1,38 +1,76 @@
-header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: var(--background-color);
-    /* padding: 1% 0%; */
+.navbar {
+  height: 80px;
+  width: 100%;
+  background: blue;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  font-size: 1.2 rem;
+
 }
 
-header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.navlogo {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.navlinks {
+  left: -100%;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 20px;
+  list-style: none;
+}
+
+.navlink {
+  text-decoration: none;
+  color: var(--main-color);
+  transition: 0.3s all;
+}
+
+.navlink:hover {
+  color: var(--link-hover-color)
+}
+
+.navicon {
+  position: fixed;
+  top:2%;
+  left: 1%;
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+  .narbar {
+    position: relative;
   }
 
-header li {
-    list-style: none;
-    display: inline-block;
-    padding: 10px 20px;
+  .navlinks {
+    display: flex;
+    flex-direction: column;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		top: 80px;
+		left: -100%;
+		transition: 0.5s all;
   }
 
-header li a {
-    display: block;
-    padding: 16px;
-    text-decoration: none;
-    color: var(--link-color);
-  }
+  .navlinks.active {
+		background: var(--link-hover-color);
+		left: 0;
+	}
 
-header li a:hover,
-header li a:active,
-header .active {
-    border-bottom: 3px dotted var(--main-font-color);
-    border-top: 3px dotted var(--main-font-color);
-    padding-top: 8%;
-    padding-bottom: 8%;
-    color: var(--link-hover-color);
-    text-decoration: none;
-  }
+	.navitem {
+		padding: 10px 0;
+		border-top: 1px solid var(--link-visited-color);
+		border-bottom: 1px solid var(--link-visited-color);
+	}
 
+	.navicon {
+		display: flex;
+	}
+}

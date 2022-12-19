@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import AuthContext from "../auth/auth-context";
 import Button from "../components/Button";
+import React from "react";
 
 const Profile = () => {
     const {onLogout, name, email} = useContext(AuthContext);

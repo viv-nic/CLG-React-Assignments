@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Switch, useHistory } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, useHistory } from 'react-router-dom';
 import Nav from './components/nav';
 import Home from './pages/home';
 import About from './pages/about';
@@ -59,10 +59,11 @@ function App() {
     >
       
       <div className={darkMode ? "dark-theme" : "light-theme"}>
-        <Nav />
-        
-        <main>
-          <Switch>
+        <Router>
+          <Nav />
+          
+          <main>
+            <Switch>
             <Route exact path="/">
               <Home />
             </Route>
@@ -85,21 +86,33 @@ function App() {
             <Route exact path="/contact">
               <EnquireForm />
             </Route>
-            {!isLoggedIn && (
-              <Route exact path={`/login`}>
-              <Login />
-            </Route>
-            )}
-            {isLoggedIn && (
-              <Route exact path={`/profile`}>
-              <Profile />
-            </Route>
-            )}
-            <Route path="*">
-              <Fourohfour />
-            </Route>
-          </Switch>
-        </main>
+              {/* <Route path="/" exact component={Home}/>
+                
+              <Route path="/about" exact pages={About}/>
+                
+              <Route path="/projects" exact pages={Projects}/>
+                
+              <Route path={`/projects/todo-app`} exact pages={TodoList}/>
+              
+              <Route path={`/projects/food-gallery`} exact pages={FoodGallery}/>
+              
+              <Route path={`/projects/books`} exact pages={Book}/>
+                
+              <Route path="/contact" exact pages={EnquireForm}/> */}
+              
+              {!isLoggedIn && (
+                <Route path={`/login`} exact pages={Login}/>
+              )}
+              {isLoggedIn && (
+                <Route path={`/profile`} exact pages={Profile}/>
+              )}
+              <Route path="*">
+                <Fourohfour />
+              </Route>
+            </Switch>
+          </main>
+        </Router>
+       
         <Footer />
         
       </div>

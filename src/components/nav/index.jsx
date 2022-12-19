@@ -1,4 +1,5 @@
-import { NavLink, useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
+import { FiMenu, FiX } from 'react-icons/fi'; 
 import styles from "./navigation.module.css";
 import ToggleSwitch from "../toggleSwitch";
 import { useContext } from "react";
@@ -6,8 +7,19 @@ import { ThemeContext } from "../../theme/ThemeProvider";
 import AuthContext from "../../auth/auth-context";
 import Button from "../Button";
 import AvatarButton from "../avatarButton";
+import React, { useState } from "react";
 
 function Nav() {
+    const [open, setOpen] = useState(false);
+
+    const handleClick = () => { 
+        setOpen(!open);
+    }
+
+    const closeMenu = () => {
+        setOpen(false);
+    }
+
     const theme = useContext(ThemeContext);
      const darkMode = theme.darkMode;
      const { isLoggedIn } = useContext(AuthContext);
@@ -16,31 +28,40 @@ function Nav() {
 
     return(
         <header>
-            <nav className="navigation">
-                <ul>
-                    <li>
-                        <NavLink exact activeClassName={styles.active} to="/">
+            
+            <nav className={styles.navbar}>
+{/* 
+                <Link to='/' className={styles.navlogo}>
+                    Logo
+                </Link> */}
+                <div onClick={handleClick} className={styles.navicon}>
+                    {open ? <FiX /> : <FiMenu />}
+                </div>
+
+                <ul className={open ? 'styles.navlinks.active' : 'styles.navlinks'}>
+                    <li className={styles.navitems}>
+                        <Link to="/" className={styles.navlink} onClick={closeMenu}>
                             Home
-                        </NavLink>
+                        </Link>
                     </li>
-                    <li>
-                        <NavLink activeClassName={styles.active} to="/about">
+                    <li className={styles.navitems}>
+                        <Link to="/about" className={styles.navlink} onClick={closeMenu}>
                             About
-                        </NavLink>
+                        </Link>
                     </li>
-                    <li>
-                        <NavLink activeClassName={styles.active} to="/projects">
+                    <li className={styles.navitems}>
+                        <Link to="/projects" className={styles.navlink} onClick={closeMenu}>
                             Projects
-                        </NavLink>
+                        </Link>
                     </li>
-                    <li>
-                        <NavLink activeClassName={styles.active} to="/contact">
+                    <li className={styles.navitems}>
+                        <Link to="/contact" className={styles.navlink} onClick={closeMenu}>
                             Contact
-                        </NavLink>
+                        </Link>
                     </li>
                 </ul>
-            </nav>
-            <div>
+
+                <div>
                 <ToggleSwitch 
                     isOn={darkMode}
                     handleToggle={() => theme.setDarkMode(!darkMode)}
@@ -61,6 +82,8 @@ function Nav() {
                
                
             </div>
+            </nav>
+           
             
         </header>
     );

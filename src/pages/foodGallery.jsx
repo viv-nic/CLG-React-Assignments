@@ -1,5 +1,6 @@
 
 import FoodList from "../components/FoodList/FoodList";
+import React from "react";
 
 const FoodGallery = () => {
     return (
