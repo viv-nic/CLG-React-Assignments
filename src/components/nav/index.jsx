@@ -38,7 +38,7 @@ function Nav() {
                     {open ? <FiX /> : <FiMenu />}
                 </div>
 
-                <ul className={open ? 'styles.navlinks.active' : 'styles.navlinks'}>
+                <ul className={open ? 'styles.navlinks active' : 'styles.navlinks'}>
                     <li className={styles.navitems}>
                         <Link to="/" className={styles.navlink} onClick={closeMenu}>
                             Home
